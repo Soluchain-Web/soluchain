@@ -1,2 +1,2 @@
-# soluchain
+# Soluchain
 HACKATHON WEB3 ENAP

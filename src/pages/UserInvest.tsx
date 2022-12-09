@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from 'react-router-dom'
 import { NftKindNavbar } from "../components/NftKindNavbar";
 
-import { SuggestionItem } from "../components/SuggestionItem";
+import { NftItem } from "../components/NftItem";
 import { UserHeader } from "../components/UserHeader";
 import { userData, nftData } from "../utils/model"
 
@@ -31,13 +31,17 @@ export function UserInvest(){
                             </div>
                             {nftData.items.map(item =>{
                                 return (
-                                    <SuggestionItem
+                                    <NftItem
                                         id={item.id} 
                                         name={item.name} 
                                         description={item.description}
                                         bruteValue={item.bruteValue}
                                         appreciation={item.appreciation}
                                         date={item.date}
+                                        landArea={item.landArea}
+                                        imageUrl={item.imageUrl}
+                                        uf={item.uf}
+                                        quotes={item.quotes}
                                     />
                                 )
                             })}

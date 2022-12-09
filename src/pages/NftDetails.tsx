@@ -1,9 +1,23 @@
 import { NftKindNavbar } from "../components/NftKindNavbar";
 import { UserHeader } from "../components/UserHeader";
 import exampleMap from '../assets/img/mapa.png'
+import { useParams } from "react-router-dom";
+import { nftData } from "../utils/model";
+import { NftProps } from "../components/NftItem";
 
 export function NftDetails(){
-    return(
+  const params = useParams();
+  const id = params.id
+  let data : NftProps = {}
+
+  for(let i = 0; i < nftData.items.length; i++){
+    if(nftData.items[i].id === id){
+      data = nftData.items[i]
+      break
+    }
+  }
+
+  return(
       <div>
         <UserHeader/>
         <section className="container py-3">
@@ -11,7 +25,7 @@ export function NftDetails(){
             <NftKindNavbar/>
             <div className="col-12 col-md-9">
               <div className="sugestoes mb-4">
-                <h4>Fundo ABC da Amazônia</h4>
+                <h4>{data.name}</h4>
                 <img
                   src={exampleMap}
                   className="banner-foto mb-4"
@@ -19,15 +33,15 @@ export function NftDetails(){
                 <div className="d-flex mb-5 justify-content-between">
                   <div className="d-block box-total bg-light border">
                     Valor
-                    <h5 className="fw-bold">ETH 4</h5>
+                    <h5 className="fw-bold">ETH {data.bruteValue}</h5>
                   </div>
                   <div className="d-block box-total pb-1 bg-light border">
                     Área do Terreno
-                    <h5 className="fw-bold">50 km²</h5>
+                    <h5 className="fw-bold">{data.landArea} hm²</h5>
                   </div>
                   <div className="d-block box-total pb-3 bg-light border">
                     UF
-                    <h5 className="fw-bold">Amazonas</h5>
+                    <h5 className="fw-bold">{data.uf}</h5>
                   </div>
                 </div>
                 <div className="mb-5">
@@ -35,7 +49,7 @@ export function NftDetails(){
                     <div className="col-2 d-flex">
                       <div className="d-block">Quotas:</div>
                       <div className="d-block">
-                        <input type="number" value="1" className="form-control" />
+                        <input type="number" value="1" max={data.quotes} className="form-control" />
                       </div>
                     </div>
                     <div className="col-2 d-flex">
@@ -44,17 +58,7 @@ export function NftDetails(){
                   </div>
                 </div>
                 <div className="text-mutted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                  elit mauris, ullamcorper vitae mattis quis, facilisis quis odio.
-                  Quisque non ante quis sapien scelerisque volutpat. Ut cursus
-                  tellus in maximus porta. In metus est, venenatis eu nisl auctor,
-                  hendrerit interdum velit. Nulla facilisi. Ut at ullamcorper neque,
-                  a euismod leo. <br />Phasellus in dui ornare, scelerisque augue
-                  vitae, cursus est. Sed eleifend ultrices consequat. Curabitur
-                  cursus ligula eget nulla efficitur, sed maximus odio commodo.
-                  Phasellus aliquam gravida sollicitudin. Cras venenatis in lacus
-                  vitae consequat. Duis vulputate viverra urna, sit amet consectetur
-                  mi iaculis in. Suspendisse potenti.
+                  {data.description}
                 </div>
               </div>
             </div>

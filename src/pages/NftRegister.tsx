@@ -1,7 +1,8 @@
 import { Navigate } from "react-router-dom";
 
-export function Dashboard(){
+export function NftRegister(){
     return(
-        <div></div>
+        <div>
+        </div>
     )
 }

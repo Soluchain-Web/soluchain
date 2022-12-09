@@ -1,1 +1,70 @@
-@import "~bootstrap/scss/bootstrap";
+$primaryColor: #81B661;
+
+.primary-color{
+    color: $primaryColor
+}
+
+.nav-link.active{
+    border-bottom: 2px solid $primaryColor;
+}
+
+h4 {
+    margin-bottom: 25px;
+}
+  
+.sugestoes h6.fw-bold a {
+    text-decoration: none;
+    color: $primaryColor;
+}
+
+.sugestoes h6 a {
+    text-decoration: none;
+    color: #333;
+}
+  
+.sugestoes .border {
+    border-radius: 8px;
+    border-color: #333;
+}
+  
+.sidebar {
+    border-radius: 8px;
+}
+  
+.sidebar a h6 b {
+    color: #0b4d20;
+}
+
+.sidebar a h6 {
+    color: #ddd;
+}
+  
+.sidebar a {
+    border-bottom: 1px solid #1abd4b;
+}
+  
+.sidebar a:last-child {
+    border-bottom: none;
+}
+
+.box-total {
+      width: 30%;
+      padding: 30px;
+}
+
+.box-total:first-child {
+    width: 30%;
+    padding: 30px;
+    background: $primaryColor;
+}
+  
+.banner-foto{
+    width:100%;
+    overflow: hidden;
+    height:300px;
+    object-fit: cover;
+}
+
+.bg-primary-color{
+    background-color: $primaryColor;
+}

@@ -9,7 +9,7 @@ $primaryColor: #81B661;
 }
 
 h4 {
-    margin-bottom: 25px;
+    padding-bottom: 15px;
 }
   
 .sugestoes h6.fw-bold a {
@@ -39,10 +39,6 @@ h4 {
     color: #ddd;
 }
   
-.sidebar a {
-    border-bottom: 1px solid #1abd4b;
-}
-  
 .sidebar a:last-child {
     border-bottom: none;
 }
@@ -67,4 +63,17 @@ h4 {
 
 .bg-primary-color{
     background-color: $primaryColor;
+}
+.linha-portifolio div > div{
+    
+    border-bottom: 1px solid #fafafa;
+    border-top: 1px solid #fafafa;
+    padding:15px;
+}
+.linha-portifolio div:first-child > div{
+    border-left:3px solid $primaryColor;
+}
+
+.linha-portifolio div:last-child > div{
+    border-right:3px solid $primaryColor;
 }

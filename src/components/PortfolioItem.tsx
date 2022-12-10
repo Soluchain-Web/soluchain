@@ -1,15 +1,25 @@
-interface Props{
-    name: string
-    percentage: number
-    criptoInvested : number
+interface Props {
+  name: string;
+  percentage: number;
+  criptoInvested: number;
 }
 
-export function PortfolioItem(props:Props){
-    return(
-        <div className="row py-1">
-            <div className="col-8">{props.name}</div>
-            <div className="col-2">{props.percentage}%</div>
-            <div className="col-2">ETH {props.criptoInvested}</div>
+export function PortfolioItem(props: Props) {
+  return (
+    <div className="row mb-2 linha-portifolio">
+      <div className="col-8 overflow-hidden">
+        <div>{props.name}</div>
+      </div>
+      <div className="col-1 text-center">
+        <div>{props.percentage}%</div>
+      </div>
+      <div className="col-3 text-center">
+        <div>
+          <b>
+            <small>ETH</small> {props.criptoInvested}
+          </b>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

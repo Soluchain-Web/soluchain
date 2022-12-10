@@ -6,15 +6,15 @@ interface Props {
 
 export function PortfolioItem(props: Props) {
   return (
-    <div className="row mb-2 linha-portifolio">
-      <div className="col-8 overflow-hidden">
-        <div>{props.name}</div>
+    <div className="row mb-3 linha-portifolio d-flex">
+      <div className="col-7 overflow-hidden">
+        <div className="d-flex">{props.name}</div>
       </div>
-      <div className="col-1 text-center">
-        <div>{props.percentage}%</div>
+      <div className="col-1">
+        <div className="d-flex">{props.percentage}%</div>
       </div>
-      <div className="col-3 text-center">
-        <div>
+      <div className="col-4 text-center">
+        <div className="d-flex justify-content-end">
           <b>
             <small>ETH</small> {props.criptoInvested}
           </b>

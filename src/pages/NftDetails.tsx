@@ -1,35 +1,28 @@
 import { NftKindNavbar } from "../components/NftKindNavbar";
 import { UserHeader } from "../components/UserHeader";
-import exampleMap from '../assets/img/mapa.png'
+import exampleMap from "../assets/img/mapa.png";
 import { useParams } from "react-router-dom";
 import { nftData } from "../utils/model";
 import { NftProps } from "../components/NftItem";
 
-export function NftDetails(){
+export function NftDetails() {
   const params = useParams();
-  const id = params.id
-  let data : NftProps = {}
+  const id = params.id;
+  
+  var data: NftProps = nftData.items.filter((x) => x.id === id)[0];
 
-  for(let i = 0; i < nftData.items.length; i++){
-    if(nftData.items[i].id === id){
-      data = nftData.items[i]
-      break
-    }
-  }
-
-  return(
+  if (data === undefined) return <div>NFT não encontrado.</div>;
+  else
+    return (
       <div>
-        <UserHeader/>
+        <UserHeader />
         <section className="container py-3">
           <div className="row">
-            <NftKindNavbar/>
+            <NftKindNavbar />
             <div className="col-12 col-md-9">
               <div className="sugestoes mb-4">
                 <h4>{data.name}</h4>
-                <img
-                  src={exampleMap}
-                  className="banner-foto mb-4"
-                />
+                <img src={exampleMap} className="banner-foto mb-4" />
                 <div className="d-flex mb-5 justify-content-between">
                   <div className="d-block box-total bg-light border">
                     Valor
@@ -49,7 +42,12 @@ export function NftDetails(){
                     <div className="col-2 d-flex">
                       <div className="d-block">Quotas:</div>
                       <div className="d-block">
-                        <input type="number" value="1" max={data.quotes} className="form-control" />
+                        <input
+                          type="number"
+                          value="1"
+                          max={data.quotes}
+                          className="form-control"
+                        />
                       </div>
                     </div>
                     <div className="col-2 d-flex">
@@ -57,13 +55,11 @@ export function NftDetails(){
                     </div>
                   </div>
                 </div>
-                <div className="text-mutted">
-                  {data.description}
-                </div>
+                <div className="text-mutted">{data.description}</div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    )
+    );
 }

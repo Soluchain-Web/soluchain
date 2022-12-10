@@ -8,7 +8,7 @@ import { NftProps } from "../components/NftItem";
 export function NftDetails() {
   const params = useParams();
   const id = params.id;
-  
+
   var data: NftProps = nftData.items.filter((x) => x.id === id)[0];
 
   if (data === undefined) return <div>NFT não encontrado.</div>;

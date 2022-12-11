@@ -4,6 +4,7 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import { ConnectWallet } from "../components/ConnectWallet";
+import imgLogoSrc from "../assets/img/logo.png";
 
 import { Navigate } from "react-router-dom";
 
@@ -28,19 +29,26 @@ const wagmiClient = createClient({
 
 export function Login() {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
-        <div className="bg-light">
-          <div className="row">
-            <div className="offset-4">
-              <div className="col-4 bg-white my-5 rounded shadow p-5">
-                <h1>Identificação</h1>
-                <ConnectWallet />
+    <div className="bg-login">
+      <div className="row">
+        <div className="col-1 col-sm-2 col-md-4"></div>
+        <div className="col-10 col-sm-8 col-md-4 bg-white rounded shadow my-5 p-5">
+          <WagmiConfig client={wagmiClient}>
+            <RainbowKitProvider chains={chains}>
+              <div className="d-flex justify-content-center pb-5 border-bottom">
+                <img src={imgLogoSrc} width="350" className="w-100" />
               </div>
-            </div>
-          </div>
+              <div className="text-center mt-5">
+                <h2>Identificação</h2>
+                <p className="lead">Para começar, conecte-se a uma carteira</p>
+                <div className="d-flex justify-content-center">
+                  <ConnectWallet />
+                </div>
+              </div>
+            </RainbowKitProvider>
+          </WagmiConfig>
         </div>
-      </RainbowKitProvider>
-    </WagmiConfig>
+      </div>
+    </div>
   );
 }

@@ -26,7 +26,7 @@ export function NftDetails() {
                 <div className="d-flex mb-5 justify-content-between">
                   <div className="d-block box-total bg-light border">
                     Valor
-                    <h5 className="fw-bold">ETH {data.bruteValue}</h5>
+                    <h5 className="fw-bold">{data.bruteValue} <small>CELOS</small></h5>
                   </div>
                   <div className="d-block box-total pb-1 bg-light border">
                     Área do Terreno
@@ -51,7 +51,7 @@ export function NftDetails() {
                       </div>
                     </div>
                     <div className="col-2 d-flex">
-                      <button className="btn btn-lg btn-primary">Alugar</button>
+                      <button className="btn btn-lg btn-primary">Alugar NFT Verde</button>
                     </div>
                   </div>
                 </div>

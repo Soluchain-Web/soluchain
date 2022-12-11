@@ -28,7 +28,7 @@ export function NftItem({id, name, description, bruteValue, appreciation, date} 
                         <small>Valor bruto: <b className='d-block'>{bruteValue} ETH</b></small>
                     </span>
                     <span className="fs-6">
-                        <small>Impacto gerado: <b className={isAppreciationNegative}>{appreciation}%</b></small>
+                        <small>Impacto gerado: <b className={isAppreciationNegative}>{appreciation} árvores</b></small>
                     </span>
                     <span className="fs-6">
                         <small>Vencimento: <b className='d-block'>{date}</b></small>

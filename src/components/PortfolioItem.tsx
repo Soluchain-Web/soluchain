@@ -11,12 +11,12 @@ export function PortfolioItem(props: Props) {
         <div className="d-flex">{props.name}</div>
       </div>
       <div className="col-1">
-        <div className="d-flex">{props.percentage}%</div>
+        <div className="d-flex"><span>{props.percentage} </span></div>
       </div>
       <div className="col-4 text-center">
         <div className="d-flex justify-content-end">
           <b>
-            <small>ETH</small> {props.criptoInvested}
+             {props.criptoInvested} <small>CELOS</small> 
           </b>
         </div>
       </div>

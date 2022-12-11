@@ -1,13 +1,16 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import logoSrc from "../assets/img/logo.png";
 
 export function UserHeader(){
     return(
         <header>
                 <nav className="navbar navbar-expand-lg bg-white border-bottom py-3">
                     <div className="container">
-                        <NavLink to='/Home' className="navbar-brand fw-bold" title="home">CarbonGov</NavLink>
+                        <NavLink to='/Home' className="navbar-brand fw-bold" title="home">
+                            <img src={logoSrc} width="250"/>
+                        </NavLink>
                         <button
                             className="navbar-toggler"
                             type="button"

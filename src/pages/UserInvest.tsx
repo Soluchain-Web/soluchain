@@ -1,6 +1,5 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from 'react-router-dom'
 import { NftKindNavbar } from "../components/NftKindNavbar";
 
 import { NftItem } from "../components/NftItem";

@@ -1,6 +1,5 @@
 export const userData = {
     userPatrimony: {
-        myPatrimony: 120,
         myInvestiment: 115,
         balanceAccount: 5
     },

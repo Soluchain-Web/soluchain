@@ -4,10 +4,16 @@ import exampleMap from "../assets/img/mapa.png";
 import { useParams } from "react-router-dom";
 import { nftData } from "../utils/model";
 import { NftProps } from "../components/NftItem";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export function NftDetails() {
   const [totalQuotes, setTotalQuotes] = useState('1');
+
+  async function handleBuyTokens(event: FormEvent){
+      event.preventDefault
+
+      //Toledo
+  }
 
   const params = useParams();
   const rip = params.id;
@@ -41,24 +47,24 @@ export function NftDetails() {
                   </div>
                 </div>
                 <div className="mb-5">
-                  <div className="row">
+                  <form className="row" onSubmit={handleBuyTokens}>
                     <div className="col-2 d-flex">
                       <div className="d-block">Quotas:</div>
-                      <div className="d-block">
-                        <input
-                          type="number"
-                          min="1"
-                          max={data.quotes}
-                          className="form-control"
-                          value={totalQuotes}
-                          onChange={e=>{setTotalQuotes(e.target.value)}}
-                        />
+                        <div className="d-block">
+                          <input
+                            type="number"
+                            min="1"
+                            max={data.quotes}
+                            className="form-control"
+                            value={totalQuotes}
+                            onChange={e=>{setTotalQuotes(e.target.value)}}
+                          />
+                        </div>
                       </div>
-                    </div>
                     <div className="col-2 d-flex">
-                      <button className="btn btn-lg btn-primary">Alugar NFT Verde</button>
+                      <button type='submit' className="btn btn-lg btn-primary">Alugar NFT Verde</button>
                     </div>
-                  </div>
+                  </form>
                 </div>
                 <div className="text-mutted">{data.description}</div>
               </div>

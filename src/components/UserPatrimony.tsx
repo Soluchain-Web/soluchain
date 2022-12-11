@@ -1,16 +1,19 @@
+import { userData } from "../utils/model";
+
 interface Props {
-  myPatrimony: number;
   myInvestiment: number;
   accountBalance: number;
 }
 
 export function UserPatrimony(props: Props) {
+  const participationAmount = userData.myPorfolio.reduce((amount, el)=> amount + el.criptoInvested, 0)
+
   return (
     <div className="row text-center ">
       <div className="col-12 col-sm-4">
         <div className="box-total w-100">
           Minha participação
-          <h5 className="fw-bold">{props.myPatrimony} <small>CELOS</small></h5>
+          <h5 className="fw-bold">{participationAmount} <small>CELOS</small></h5>
         </div>
       </div>
       <div className="col-12 col-sm-4 pb-1">

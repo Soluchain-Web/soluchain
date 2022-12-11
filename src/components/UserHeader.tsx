@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import { nftData } from "../utils/model";
 import { NftItem } from "./NftItem";
-import logoSrc from "../assets/img/logo.png";
+import logo from "../assets/img/logo.png";
 
 export function UserHeader(){
     const [mobileMenuIsActivate, setMobileMenuIsActivate] = useState(false);
@@ -29,7 +29,7 @@ export function UserHeader(){
             <Navbar collapseOnSelect expand="lg" bg="white" className="navbar border-bottom p-3" variant="white">
                 <Container>
                     <NavLink to='/Home' className="navbar-brand fw-bold" title="home">
-                        <img src={logoSrc} width="250"/>
+                        <img src={logo} width="250"/>
                     </NavLink>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleMobileMenu} />
                     <Navbar.Collapse
@@ -38,7 +38,7 @@ export function UserHeader(){
                         >
                         <Nav className="navbar-nav">
                             <NavLink to='/Home' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3" aria-current="page">Portfólio</NavLink>
-                            <NavLink to='/NFT/List' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Investir</NavLink>
+                            <NavLink to='/NFT/List' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Alugar</NavLink>
                             <NavLink to='/Help' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Ajuda</NavLink>
                             {
                             mobileMenuIsActivate 

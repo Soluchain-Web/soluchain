@@ -13,7 +13,6 @@ export function UserHome() {
           <div className="offset-0 offset-xl-2">
             <div className="col-12 col-xl-8">
               <UserPatrimony
-                myPatrimony={userData.userPatrimony.myPatrimony}
                 myInvestiment={userData.userPatrimony.myInvestiment}
                 accountBalance={userData.userPatrimony.balanceAccount}
               />
@@ -32,7 +31,7 @@ export function UserHome() {
                 </div>
               </div>
               <div className="sugestoes mt-5">
-                <h4>Sugestões de Investimento</h4>
+                <h4>Sugestões para participação em projetos</h4>
                 {nftData.items.map((item) => {
                   return (
                     <NftItem

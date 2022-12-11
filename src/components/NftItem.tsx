@@ -5,7 +5,8 @@ export interface NftProps{
     name: string
     description: string
     bruteValue: number
-    appreciation: number
+    appreciation: number,
+    results: string,
     date: string
     imageUrl: string
     landArea: number
@@ -13,7 +14,7 @@ export interface NftProps{
     quotes: number
 }
 
-export function NftItem({rip, name, description, bruteValue, appreciation, date} : NftProps){
+export function NftItem({rip, name, description, bruteValue, appreciation, results, date} : NftProps){
     const isAppreciationNegative = appreciation > 0 ? 'text-success d-block': 'text-danger d-block'
 
     return(
@@ -28,7 +29,7 @@ export function NftItem({rip, name, description, bruteValue, appreciation, date}
                         <small>Valor bruto: <b className='d-block'>{bruteValue} CELOS</b></small>
                     </span>
                     <span className="fs-6">
-                        <small>Impacto gerado: <b className={isAppreciationNegative}>{appreciation} árvores</b></small>
+                        <small>Impacto gerado: <b className={isAppreciationNegative}>{results} árvores</b></small>
                     </span>
                     <span className="fs-6">
                         <small>Vencimento: <b className='d-block'>{date}</b></small>

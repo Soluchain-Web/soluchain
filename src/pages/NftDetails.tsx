@@ -2,17 +2,17 @@ import { NftKindNavbar } from "../components/NftKindNavbar";
 import { UserHeader } from "../components/UserHeader";
 import exampleMap from "../assets/img/mapa.png";
 import { useParams } from "react-router-dom";
-import { nftData } from "../utils/model";
+import { nftDTO } from "../mock/api/NftDTO";
 import { NftProps } from "../components/NftItem";
 import { useState } from "react";
 
 export function NftDetails() {
-  const [totalQuotes, setTotalQuotes] = useState('1');
+  const [totalQuotes, setTotalQuotes] = useState("1");
 
   const params = useParams();
   const rip = params.id;
 
-  let data: NftProps = nftData.items.filter((x) => x.rip === rip)[0];
+  let data: NftProps = nftDTO.items.filter((x) => x.rip === rip)[0];
 
   if (data === undefined) return <div>NFT não encontrado.</div>;
   else
@@ -29,7 +29,9 @@ export function NftDetails() {
                 <div className="d-flex mb-5 justify-content-between">
                   <div className="d-block box-total bg-light border">
                     Valor
-                    <h5 className="fw-bold">{data.bruteValue} <small>CELOS</small></h5>
+                    <h5 className="fw-bold">
+                      {data.bruteValue} <small>CELOS</small>
+                    </h5>
                   </div>
                   <div className="d-block box-total pb-1 bg-light border">
                     Área do Terreno
@@ -51,12 +53,16 @@ export function NftDetails() {
                           max={data.quotes}
                           className="form-control"
                           value={totalQuotes}
-                          onChange={e=>{setTotalQuotes(e.target.value)}}
+                          onChange={(e) => {
+                            setTotalQuotes(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
                     <div className="col-2 d-flex">
-                      <button className="btn btn-lg btn-primary">Alugar NFT Verde</button>
+                      <button className="btn btn-lg btn-primary">
+                        Alugar NFT Verde
+                      </button>
                     </div>
                   </div>
                 </div>

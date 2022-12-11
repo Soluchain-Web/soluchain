@@ -1,54 +1,55 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from 'react-router-dom'
 import { NftKindNavbar } from "../components/NftKindNavbar";
 
 import { NftItem } from "../components/NftItem";
 import { UserHeader } from "../components/UserHeader";
-import { userData, nftData } from "../utils/model"
-
-export function UserInvest(){
-    return(
-        <div>
-            <UserHeader/>
-            <section className="container py-3">
-                <div className="row">
-                    <NftKindNavbar/>
-                    <div className="col-12 col-md-9">
-                        <div className="sugestoes mt-4">
-                            <h4>Investir em Créditos de Carbono</h4>
-                            <div className="my-3 search-box">
-                                <div className="input-group mb-3">
-                                    <input 
-                                        type="text" 
-                                        className="form-control" 
-                                        placeholder="Pesquisar investimentos" 
-                                        aria-label="Pesquisar" 
-                                        aria-describedby="basic-addon1"
-                                    />
-                                    <span className="input-group-text" id="basic-addon1"><FontAwesomeIcon icon={faSearch}/></span>
-                                </div>
-                            </div>
-                            {nftData.items.map(item =>{
-                                return (
-                                    <NftItem
-                                        rip={item.rip} 
-                                        name={item.name} 
-                                        description={item.description}
-                                        bruteValue={item.bruteValue}
-                                        appreciation={item.appreciation}
-                                        date={item.date}
-                                        landArea={item.landArea}
-                                        imageUrl={item.imageUrl}
-                                        uf={item.uf}
-                                        quotes={item.quotes}
-                                    />
-                                )
-                            })}
-                        </div>
-                    </div>
+import { nftDTO } from "../mock/api/NftDTO";
+export function UserInvest() {
+  return (
+    <div>
+      <UserHeader />
+      <section className="container py-3">
+        <div className="row">
+          <NftKindNavbar />
+          <div className="col-12 col-md-9">
+            <div className="sugestoes mt-4">
+              <h4>Investir em Créditos de Carbono</h4>
+              <div className="my-3 search-box">
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Pesquisar investimentos"
+                    aria-label="Pesquisar"
+                    aria-describedby="basic-addon1"
+                  />
+                  <span className="input-group-text" id="basic-addon1">
+                    <FontAwesomeIcon icon={faSearch} />
+                  </span>
                 </div>
-            </section>
+              </div>
+              {nftDTO.items.map((item) => {
+                return (
+                  <NftItem
+                    rip={item.rip}
+                    name={item.name}
+                    description={item.description}
+                    bruteValue={item.bruteValue}
+                    appreciation={item.appreciation}
+                    results={item.results}
+                    date={item.date}
+                    landArea={item.landArea}
+                    imageUrl={item.imageUrl}
+                    uf={item.uf}
+                    quotes={item.quotes}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
-    )
+      </section>
+    </div>
+  );
 }

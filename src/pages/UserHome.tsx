@@ -2,7 +2,8 @@ import { NftItem } from "../components/NftItem";
 import { UserHeader } from "../components/UserHeader";
 import { UserPatrimony } from "../components/UserPatrimony";
 import { PortfolioItem } from "../components/PortfolioItem";
-import { nftData, userData } from "../utils/model";
+import { nftDTO } from "../mock/api/NftDTO";
+import { userDTO } from "../mock/api/UserDTO";
 
 export function UserHome() {
   return (
@@ -13,14 +14,14 @@ export function UserHome() {
           <div className="offset-0 offset-xl-2">
             <div className="col-12 col-xl-8">
               <UserPatrimony
-                myPatrimony={userData.userPatrimony.myPatrimony}
-                myInvestiment={userData.userPatrimony.myInvestiment}
-                accountBalance={userData.userPatrimony.balanceAccount}
+                myPatrimony={userDTO.userPatrimony.myPatrimony}
+                myInvestiment={userDTO.userPatrimony.myInvestiment}
+                accountBalance={userDTO.userPatrimony.balanceAccount}
               />
               <div className="my-5">
                 <div className="portifolio">
                   <h4>Meu Portfólio</h4>
-                  {userData.myPorfolio.map((item) => {
+                  {userDTO.myPorfolio.map((item) => {
                     return (
                       <PortfolioItem
                         name={item.name}
@@ -33,7 +34,7 @@ export function UserHome() {
               </div>
               <div className="sugestoes mt-5">
                 <h4>Sugestões de Investimento</h4>
-                {nftData.items.map((item) => {
+                {nftDTO.items.map((item) => {
                   return (
                     <NftItem
                       rip={item.rip}
@@ -41,6 +42,7 @@ export function UserHome() {
                       description={item.description}
                       bruteValue={item.bruteValue}
                       appreciation={item.appreciation}
+                      results={item.results}
                       date={item.date}
                       landArea={item.landArea}
                       imageUrl={item.imageUrl}

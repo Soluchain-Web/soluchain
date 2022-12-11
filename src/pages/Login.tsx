@@ -6,8 +6,6 @@ import { publicProvider } from "wagmi/providers/public";
 import { ConnectWallet } from "../components/ConnectWallet";
 import imgLogoSrc from "../assets/img/logo.png";
 
-import { Navigate } from "react-router-dom";
-
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
   [

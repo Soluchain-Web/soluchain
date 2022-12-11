@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import React from "react";
-import { nftData } from "../utils/model";
-import { NftItem } from "./NftItem";
 import logoSrc from "../assets/img/logo.png";
 
 export function UserHeader(){

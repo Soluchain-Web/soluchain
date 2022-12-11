@@ -36,7 +36,7 @@ export const nftData = {
         uf: 'AM',
         quotes: 150
     },{
-        id: '2',
+        rip: '2',
         name: 'Projeto Reserva Nacional da Tijuca',
         description: 'Terreno da União localizado no interior de Goiás.',
         bruteValue: 2,
@@ -47,7 +47,7 @@ export const nftData = {
         uf: 'GO',
         quotes: 50
     },{
-        id: '3',
+        rip: '3',
         name: 'Projeto Andorinha Verde',
         description: 'Terreno da União localizado no interior de São Paulo.',
         bruteValue: 5,

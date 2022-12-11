@@ -7,11 +7,11 @@ export function NftKindNavbar() {
             <a className="nav-link" aria-current="page" href="#"><h6>
             <b>Crédito de Carbono</b></h6>
             </a>
-            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Renda Variável</b></h6></NavLink>
-            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Fundos de Investimento</b></h6></NavLink>
-            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Ofertas Públicas</b></h6></NavLink>
-            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Previdência Privada</b></h6></NavLink>
-            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>COE</b></h6></NavLink>
+            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Projetos parceiros</b></h6></NavLink>
+            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Terrenos em uso em projetos ambientais</b></h6></NavLink>
+            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Resultados obtidos</b></h6></NavLink>
+            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Relatórios e publicações</b></h6></NavLink>
+            <NavLink className='nav-link' aria-current="page" to='/NFT/List'><h6><b>Monitoramento ambiental</b></h6></NavLink>
         </nav>
     </div>
     )

@@ -29,7 +29,7 @@ export function NftDetails() {
                 <div className="d-flex mb-5 justify-content-between">
                   <div className="d-block box-total bg-light border">
                     Valor
-                    <h5 className="fw-bold">{data.bruteValue} CELOS</h5>
+                    <h5 className="fw-bold">{data.bruteValue} <small>CELOS</small></h5>
                   </div>
                   <div className="d-block box-total pb-1 bg-light border">
                     Área do Terreno

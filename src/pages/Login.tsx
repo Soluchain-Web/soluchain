@@ -1,7 +1,19 @@
 import { ConnectWallet } from "../components/ConnectWallet";
 import imgLogoSrc from "../assets/img/logo.png";
+import { useAccount } from "wagmi";
+import { useEffect } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
+  const navigate = useNavigate();
+  const account = useAccount();
+
+  useEffect(() => {
+    if (account.address) {
+      navigate("/Home");
+    }
+  }, [account]);
   return (
     <div className="bg-login">
       <div className="row">

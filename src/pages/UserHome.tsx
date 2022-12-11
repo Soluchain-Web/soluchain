@@ -36,7 +36,7 @@ export function UserHome() {
                 {nftData.items.map((item) => {
                   return (
                     <NftItem
-                      id={item.id}
+                      rip={item.rip}
                       name={item.name}
                       description={item.description}
                       bruteValue={item.bruteValue}

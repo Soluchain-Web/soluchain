@@ -25,33 +25,33 @@ export const userData = {
 
 export const nftData = {
     items : [{
-        id: '1',
+        rip: '1',
         name: 'Fundo ABC da Amazônia',
         description: 'Crédito de carbono - Terreno da União localizado às margens do Rio Amazonas.',
         bruteValue: 1,
-        appreciation: 1,
+        appreciation: 50000,
         date: '04/01/2023',
         imageUrl: '',
         landArea: 50, 
         uf: 'AM',
         quotes: 150
     },{
-        id: '2',
+        rip: '2',
         name: 'Reserva Ambiental Mato Seco',
         description: 'Terreno da União localizado no interior de Goiás.',
         bruteValue: 2,
-        appreciation: -5,
+        appreciation: 12321,
         date: '10/09/2023',
         imageUrl: '',
         landArea: 100, 
         uf: 'GO',
         quotes: 50
     },{
-        id: '3',
+        rip: '3',
         name: 'Reserva de Carbono',
         description: 'Terreno da União localizado no interior de São Paulo.',
         bruteValue: 5,
-        appreciation: 15,
+        appreciation: 3421,
         date: '24/08/2023',
         imageUrl: '',
         landArea: 70, 

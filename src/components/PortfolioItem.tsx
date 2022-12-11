@@ -16,7 +16,7 @@ export function PortfolioItem(props: Props) {
       <div className="col-4 text-center">
         <div className="d-flex justify-content-end">
           <b>
-            <small>ETH</small> {props.criptoInvested}
+            <small>CELOS</small> {props.criptoInvested}
           </b>
         </div>
       </div>

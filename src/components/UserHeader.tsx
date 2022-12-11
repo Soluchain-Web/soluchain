@@ -35,7 +35,7 @@ export function UserHeader(){
                         >
                         <Nav className="navbar-nav">
                             <NavLink to='/Home' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3" aria-current="page">Portfólio</NavLink>
-                            <NavLink to='/NFT/List' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Investir</NavLink>
+                            <NavLink to='/NFT/List' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Alugar</NavLink>
                             <NavLink to='/Help' className="nav-link d-flex-row justify-content-between py-3 py-md-0 px-md-3">Ajuda</NavLink>
                             {
                             mobileMenuIsActivate 

@@ -4,10 +4,16 @@ import exampleMap from "../assets/img/mapa.png";
 import { useParams } from "react-router-dom";
 import { nftDTO } from "../mock/api/NftDTO";
 import { NftProps } from "../components/NftItem";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export function NftDetails() {
   const [totalQuotes, setTotalQuotes] = useState("1");
+
+  async function handleBuyTokens(event: FormEvent) {
+    event.preventDefault;
+
+    //Toledo
+  }
 
   const params = useParams();
   const rip = params.id;
@@ -43,10 +49,10 @@ export function NftDetails() {
                   </div>
                 </div>
                 <div className="mb-5">
-                  <div className="row">
+                  <form className="row" onSubmit={handleBuyTokens}>
                     <div className="col-2 d-flex">
-                      <div className="d-block">Quotas:</div>
-                      <div className="d-block">
+                      <div className="d-block w-100">Quotas:</div>
+                      <div className="d-block w-100">
                         <input
                           type="number"
                           min="1"
@@ -59,14 +65,14 @@ export function NftDetails() {
                         />
                       </div>
                     </div>
-                    <div className="col-2 d-flex">
-                      <button className="btn btn-lg btn-primary">
+                    <div className="col-4 d-flex">
+                      <button type="submit" className="btn btn-lg btn-primary">
                         Alugar NFT Verde
                       </button>
                     </div>
-                  </div>
+                  </form>
                 </div>
-                <div className="text-mutted">{data.description}</div>
+                <div className="text-muted">{data.description}</div>
               </div>
             </div>
           </div>

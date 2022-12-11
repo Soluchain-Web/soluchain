@@ -3,7 +3,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 export const ConnectWallet = () => {
   return (
     <div>
-      <ConnectButton />
+      <ConnectButton label="Conectar carteira" />
     </div>
   );
 };

@@ -8,11 +8,12 @@ import { UserInvest } from './pages/UserInvest'
 import { NftDetails } from './pages/NftDetails'
 import { UserProfile } from './pages/UserProfile'
 import { Help } from './pages/Help'
+import { Index } from './pages'
 
 export function Router(){
     return(
         <Routes>
-            <Route path='/' element={<Login/>}/>
+            <Route path='/' element={<Index/>}/>
             <Route path='/Home' element={<UserHome/>}/>
             <Route path='/Help' element={<Help/>}/>
             <Route path='/Dashboard' element={<Dashboard/>}/>

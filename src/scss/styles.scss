@@ -1,7 +1,27 @@
 $primaryColor: #81B661;
+$secondaryColor: #d8ea1c;
 
 .primary-color{
     color: $primaryColor
+}
+
+.bg-start-primary-color{
+    width: 200px;
+    background-color: $primaryColor;
+}
+
+.bg-start-secondary-color{
+    width: 200px;
+    background-color: $secondaryColor;
+}
+
+.bg-start-primary-color:hover{
+    
+    background-color: #476932;
+}
+
+.bg-start-secondary-color:hover{
+    background-color: #858e1e;
 }
 
 .nav-link.active{

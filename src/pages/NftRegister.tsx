@@ -43,7 +43,7 @@ export function NftRegister() {
     try {
       // Toledo
       ripValidated.bruteValue;
-      navigate("/Home");
+      navigate("/");
     } catch (error) {
       console.log(error);
       alert(

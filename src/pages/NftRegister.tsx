@@ -7,6 +7,7 @@ import { nftDTO } from "../mock/api/NftDTO";
 export function NftRegister() {
   const [ripCode, setRipCode] = useState("");
   const [quotes, setQuotes] = useState("1");
+  const [value, setValue] = useState("1");
 
   const navigate = useNavigate();
 
@@ -18,6 +19,12 @@ export function NftRegister() {
         "ERROR! você deve dividir o imóvel/patrimônio em até 1000 vezes"
       );
     }
+
+    if (Number(value) > 1000 || Number(value) < 1) {
+        return alert(
+          "ERROR! você deve dividir o imóvel/patrimônio em até 1000 vezes"
+        );
+      }
 
     if (!ripCode) {
       return alert("O Código RIP não pode estar vazio");
@@ -59,6 +66,16 @@ export function NftRegister() {
           <Form.Text className="text-muted">
             RIP: Registro Imobiliário Patrimonial
           </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3 w-100" controlId="value">
+          <Form.Label>Preço total em CELOS</Form.Label>
+          <Form.Control
+            type="number"
+            max={10000}
+            min={1}
+            onChange={(e) => setValue(e.currentTarget.value)}
+            value={value}
+          />
         </Form.Group>
         <Form.Group className="mb-3 w-100" controlId="quotes">
           <Form.Label>Dividir em quantos tokens?</Form.Label>

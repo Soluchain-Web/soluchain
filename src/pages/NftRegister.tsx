@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { NftProps } from "../components/NftItem";
 import { nftDTO } from "../mock/api/NftDTO";
 
@@ -90,6 +90,11 @@ export function NftRegister() {
         <Button variant="primary" type="submit" className="w-100">
           Tokenizar
         </Button>
+        <Link to='/'>
+            <Button className="w-100 mt-2 bg-danger">
+                Voltar
+            </Button>
+        </Link>
       </Form>
     </div>
   );
